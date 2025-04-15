@@ -1,6 +1,6 @@
 ORG 0
 
-;阿良的嵌入式技術學習區LAB0:P2驅動LED閃爍
+
 
 LOOP:                  
         MOV    P2,#0H         ; 輸出到P2埠
