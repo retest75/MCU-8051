@@ -36,9 +36,9 @@ int main(void) {
          * 3. Then exit second while loop and clear the TI register manually
          */
         for (i = 0; i < SEND_SIZE; i++) {
-            SBUF = sendBuff[i];
-            while (TI == 0);
-            TI = 0;
+            SBUF = sendBuff[i]; // transmit mode
+            while (TI == 0);    // polling register TI
+            TI = 0;             // clear TI
         }
         
         /** Remark: receive data
@@ -49,9 +49,9 @@ int main(void) {
          * 3. move the input data from SBUF to recvBuff
          */
         for (i = 0; i < RECV_SIZE; i++) {
-            while (RI == 0);
-            RI = 0;
-            recvBuff[i] = SBUF;
+            while (RI == 0);    // polling register RI
+            RI = 0;             // clear RI
+            recvBuff[i] = SBUF; // receive mode
         }
         
         /** Remark: check input data and give a corresponding response

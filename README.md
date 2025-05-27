@@ -2,6 +2,6 @@
 
 ## Intro.
 
-This repository is the implement of MCU. In here, we use Intel 8051 as our core and other peripherals such like LED, DIP switch. The compile environment is Keil C51 but I upload the `main.c` files and some header files. The header files `<AT89X51.h>` or `<REGX51.h>` are not included in these project.
+此專案為 MCU 微控制器的實作，使用 Intel 8051 為核心並搭配多種周邊裝置。編譯環境使用 Keil C51，但此處只上傳各主題的主程式檔案。檔案命名方式與各主題內容有關，只需要把主程式編譯後產生 `.hex` 檔案再燒錄到晶片就可以使用。
 
-Each folder correspond a small project or implement. You will know what does these project do by its folder name.
+但因為一般編譯器(Ex. GCC)並沒有包含 `<AT89X51.h>` 或 `<REGX51.h>` 這些標頭檔，所以可能需要使用包含這些標頭檔的環境才能編譯。
