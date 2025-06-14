@@ -11,7 +11,7 @@ int main(void) {
     init_UART();
     
     while (1) {
-        //SBUF = '7';
+        SBUF = '7';
         delay(666);
     }
     
